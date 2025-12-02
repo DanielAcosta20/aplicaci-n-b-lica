@@ -49,8 +49,9 @@ func main() {
 
 	log.Println("Registering routes...")
 
-	http.HandleFunc("/", LoggingMiddleware(handlers.InventoryHandler))
+	/*http.HandleFunc("/", LoggingMiddleware(handlers.InventoryHandler))*/
 
+	
 	// Entries routes
 	http.HandleFunc("/entries", LoggingMiddleware(handlers.ShowEntries))
 	http.HandleFunc("/entries/add", LoggingMiddleware(handlers.AddEntry))
